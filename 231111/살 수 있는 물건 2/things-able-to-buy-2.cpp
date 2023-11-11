@@ -15,7 +15,7 @@ int main() {
     }
     else if(money >= 500)
     {
-        asnwer = "pen";
+        answer = "pen";
     }
     else answer = "no";
 
