@@ -14,6 +14,7 @@ int main() {
 
     // 윤년체크
     if(Y%4 == 0) months[2] = 29;
+    
     // 체크
     if(D > months[M]) cout << -1 << endl;
     else
