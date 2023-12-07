@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main() {
@@ -9,7 +10,7 @@ int main() {
     cin >> n >> m;
 
     int answer = 1;
-    int idx = m;
+    int idx = max(m,n);
 
     for(int i=2; i<=idx;)
     {
