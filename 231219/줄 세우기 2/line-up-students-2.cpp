@@ -15,7 +15,7 @@ class Student
         {
             if(this -> height == s.height)
             {
-                return this -> weight < s.weight;
+                return this -> weight > s.weight;
             }
             else return this -> height < s.height;
         }
