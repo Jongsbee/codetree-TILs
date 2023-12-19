@@ -35,6 +35,8 @@ int main() {
 
     // 1. 이름순으로 정렬
 
+    cout << fixed;
+    cout.precision(1);
     sort(vec.begin(), vec.end(), compareName);
     cout << "name" << endl;
     for(int i=0; i<5; i++)
