@@ -24,7 +24,7 @@ int main() {
 
         bool operator < (Forecast &forecast)
         {
-            return this -> day < forecast.day;
+            return this -> date < forecast.date;
         }
         
     };
@@ -39,8 +39,12 @@ int main() {
         cin >> vec[i].date >> vec[i].day >> vec[i].weather;
     }
 
+    sort(vec.begin(), vec.end());
+
     for(int i=0; i<n; i++)
     {
+
+        // cout << vec[i].date << endl;
         if(vec[i].weather == "Rain")
         {
             cout << vec[i].date << " " << vec[i].day << " " << vec[i].weather << endl;
