@@ -16,7 +16,7 @@ int main() {
     int count =
         ((a-11) * 24 * 60) + ((b-11) * 60) + (c-11);
     
-    if(count <= 0)
+    if(count < 0)
     {
         cout << -1 << endl;
     }
