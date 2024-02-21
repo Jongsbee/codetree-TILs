@@ -17,7 +17,7 @@ int main() {
     };
     vector<string> days = 
     {
-        "Mon", "Tue", "Wed", "Thr", "Fri", "Sat", "Sun"
+        "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"
     };
 
     int td_1 = 0;
