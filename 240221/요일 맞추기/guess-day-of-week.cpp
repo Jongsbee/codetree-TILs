@@ -24,13 +24,13 @@ int main() {
     int td_2 = 0;
     
     // 두 날짜의 차이만 알면 되는건가?
-    for(int i=1; i<=a; i++)
+    for(int i=1; i<a; i++)
     {
         td_1 += months[i];
     }
     td_1 += b;
 
-    for(int i=1; i<=c; i++)
+    for(int i=1; i<c; i++)
     {
         td_2 += months[i];
     }
