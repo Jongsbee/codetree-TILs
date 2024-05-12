@@ -12,10 +12,16 @@ int main() {
     const int Color_W = 1;
     const int Color_B = 2;
     const int Color_G = 3;
+    const int Color_WW = 11;
     const int Color_WB = 12;
     const int Color_BW = 21;
+    const int Color_BB = 22;
+    const int Color_WWB = 112;
+    const int Color_BBW = 221;
     const int Color_WBW = 121;   
     const int Color_BWB = 212;
+
+    
     
 
     int n;
@@ -38,30 +44,34 @@ int main() {
         {
             // 최솟값 갱신
             minX = minX < nowX - a ? minX : nowX - a;
-            // cout << "minx : " << minX << endl;
+            // cout << "nowx : " << nowX << endl;
             // a번만큼 칠하기
             for(int j=0; j<a; j++)
             {
                 switch(vec[nowX])
                 {
                     case Color_N : vec[nowX] = Color_W; break;
-                    // case Color_W : vec[nowX] = Color_W; break;
+                    case Color_W : vec[nowX] = Color_WW; break;
                     case Color_B : vec[nowX] = Color_BW; break;
                     case Color_WB : vec[nowX] = Color_WBW; break;
+                    case Color_BB : vec[nowX] = Color_BBW; break;
                     case Color_BWB : vec[nowX] = Color_G; break;
+                    case Color_BBW : vec[nowX] = Color_G; break;
                     case Color_G : vec[nowX] = Color_G; break;
                 }
-
+                // cout << vec[nowX] << " ";
                 if(j==a-1) break;
                 nowX--;
             }
+
+            // cout << endl;
         }
         // 오른쪽으로 가면 검은색으로 칠하기
         else if(dir == 'R')
         {
             // 최댓값 갱신
             maxX = maxX >= nowX + a ? maxX : nowX + a;
-            // cout << "maxX : " << maxX << endl;
+    //  cout << "nowx : " << nowX << endl;
                         // a번만큼 칠하기
             for(int j=0; j<a; j++)
             {
@@ -69,15 +79,18 @@ int main() {
                 {
                     case Color_N : vec[nowX] = Color_B; break;
                     case Color_W : vec[nowX] = Color_WB; break;
-                    // case Color_B : vec[nowX] = Color_B; break;
+                    case Color_B : vec[nowX] = Color_BB; break;
                     case Color_BW : vec[nowX] = Color_BWB; break;
+                    case Color_WW : vec[nowX] = Color_WWB; break;
                     case Color_WBW : vec[nowX] = Color_G; break;
+                    case Color_WWB : vec[nowX] = Color_G; break;
                     case Color_G : vec[nowX] = Color_G; break;
                 }
-
+                // cout << vec[nowX] << " ";
                 if(j==a-1) break;
                 nowX++;
             }
+            // cout << endl;
         }
 
         
@@ -93,12 +106,18 @@ int main() {
         // cout << vec[i] << endl;
         switch(vec[i])
         {
-            case Color_W : cnt_w++; break;
-            case Color_BW : cnt_w++; break;
-            case Color_WB : cnt_b++; break;
-            case Color_WBW : cnt_w++; break;
-            case Color_BWB : cnt_b++; break;
-            case Color_B : cnt_b++;  break;
+            case Color_W : 
+            case Color_WW : 
+            case Color_BW : 
+            case Color_WBW : 
+            case Color_BBW : 
+                cnt_w++; break;
+            case Color_WB : 
+            case Color_BWB : 
+            case Color_B : 
+            case Color_BB : 
+            case Color_WWB : 
+                cnt_b++;  break;
             case Color_G : cnt_g++;  break;
         }
     }
