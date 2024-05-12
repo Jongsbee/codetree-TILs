@@ -17,6 +17,8 @@ int main() {
     const int Color_BW = 21;
     const int Color_BB = 22;
     const int Color_WWB = 112;
+    const int Color_BWW = 211;
+    const int Color_WBB = 122;
     const int Color_BBW = 221;
     const int Color_WBW = 121;   
     const int Color_BWB = 212;
@@ -56,6 +58,7 @@ int main() {
                     case Color_WB : vec[nowX] = Color_WBW; break;
                     case Color_BB : vec[nowX] = Color_BBW; break;
                     case Color_BWB : vec[nowX] = Color_G; break;
+                    case Color_WBB : vec[nowX] = Color_G; break;
                     case Color_BBW : vec[nowX] = Color_G; break;
                     case Color_G : vec[nowX] = Color_G; break;
                 }
@@ -84,6 +87,7 @@ int main() {
                     case Color_WW : vec[nowX] = Color_WWB; break;
                     case Color_WBW : vec[nowX] = Color_G; break;
                     case Color_WWB : vec[nowX] = Color_G; break;
+                    case Color_BWW : vec[nowX] = Color_G; break;
                     case Color_G : vec[nowX] = Color_G; break;
                 }
                 // cout << vec[nowX] << " ";
@@ -111,12 +115,14 @@ int main() {
             case Color_BW : 
             case Color_WBW : 
             case Color_BBW : 
+            case Color_BWW : 
                 cnt_w++; break;
             case Color_WB : 
             case Color_BWB : 
             case Color_B : 
             case Color_BB : 
             case Color_WWB : 
+            case Color_WBB : 
                 cnt_b++;  break;
             case Color_G : cnt_g++;  break;
         }
