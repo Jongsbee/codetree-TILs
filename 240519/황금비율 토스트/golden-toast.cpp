@@ -39,8 +39,9 @@ int main() {
             case 'D':
                 if(it != vec.end())
                 {
+                    vector<char>::iterator it2 = it;
                     it++;
-                    vec.erase(--it);
+                    vec.erase(it2);
                 }
                 break;
 
