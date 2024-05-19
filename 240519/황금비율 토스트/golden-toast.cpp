@@ -40,7 +40,7 @@ int main() {
                 if(it != vec.end())
                 {
                     it++;
-                    vec.erase(--vec.end());
+                    vec.erase(--it);
                 }
                 break;
 
